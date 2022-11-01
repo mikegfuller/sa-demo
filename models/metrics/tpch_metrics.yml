@@ -1,0 +1,60 @@
+
+version: 2
+
+metrics:
+  - name: revenue
+    label: Revenue
+    model: ref('fct_order_items')
+    description: "Income from all orders less tax"
+
+    type: sum
+    sql: discounted_item_sales_amount - item_tax_amount
+
+    timestamp: order_date
+    time_grains: [day, week, month, quarter, year]
+
+    dimensions:
+      - ship_mode
+
+  - name: customers
+    label: Customers
+    model: ref('fct_order_items')
+    description: "Number of customers with a sale"
+
+    type: count_distinct
+    sql: customer_key
+
+    timestamp: order_date
+    time_grains: [day, week, month, quarter, year]
+
+    dimensions:
+      - ship_mode
+
+  - name: expenses
+    label: Expenses
+    model: ref('fct_order_items')
+    description: "Total expenses per order"
+
+    type: sum
+    sql: cost
+
+    timestamp: order_date
+    time_grains: [day, week, month, quarter, year]
+
+    dimensions:
+      - ship_mode
+      - is_return
+
+  - name: gross_profit
+    label: Gross Profit
+    description: "Revenue minus expenses"
+
+    type: expression
+    sql: "{{ metric('revenue') }} - {{ metric('expenses') }}"
+
+    timestamp: order_date
+    time_grains: [day, week, month, quarter, year]
+
+    dimensions:
+      - ship_mode
+      - is_return
