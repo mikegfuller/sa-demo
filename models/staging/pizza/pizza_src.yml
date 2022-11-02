@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: pizza_shop
+    database: mike_fuller_sandbox
+    schema: pizza
+    tables:
+      - name: pizza_sales

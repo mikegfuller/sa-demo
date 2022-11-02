@@ -171,3 +171,57 @@ models:
         description: '{{ doc("item_tax_amount") }}'
       - name: net_item_sales_amount
         description: '{{ doc("net_item_sales_amount") }}'
+
+  - name: dim_worker
+    description: "worker dimension sourced from human capital system"
+    columns:
+      - name: employee_id
+        description: "(primary key) id for the employee, contractor ids are not populated in this field"
+
+      - name: hire_dt
+        description: "date employee was hired, contractor hire dates are blank"
+
+      - name: hire_year
+        description: "year employee was hired"
+
+      - name: hire_quarter
+        description: "quarter the employee was hired"
+
+      - name: hire_month
+        description: "month the employee was hired"
+
+      - name: worker_country
+        description: "country of residence for worker"
+
+      - name: worker_name
+        description: "worker full name"
+
+      - name: worker_first_name
+        description: "worker first name"
+
+      - name: worker_last_name
+        description: "worker last name"
+
+      - name: worker_docs
+        description: "list of documents we have on file"
+
+      - name: date_of_birth
+        description: "worker birthday"
+
+      - name: worker_age
+        description: "worker age, derived from birthday"
+
+      - name: worker_id
+        description: "worker id (includes contractors)"
+
+      - name: delete_flg
+        description: "soft delete flag"
+
+      - name: update_dt
+        description: "date the record was updated"
+
+      - name: worker_licenses
+        description: "licenses on file for the worker"
+
+      - name: worker_passports
+        description: "passport on file for the worker"

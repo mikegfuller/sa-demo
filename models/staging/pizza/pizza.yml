@@ -1,0 +1,15 @@
+version: 2
+
+template_model_config: &model_config
+  config:
+    database: mike_fuller_sandbox
+    schema: pizza
+    materialized: table
+
+models:
+    - name: stg_pizza_sales
+      description: "pizza sales staging model"    
+      <<: *model_config
+    - name: fct_pizza_sales
+      description: "pizza sales fact table"
+      <<: *model_config
