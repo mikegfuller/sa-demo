@@ -1,3 +1,5 @@
+--change
+
 with worker as (
 
     select * from {{ ref('stg_worker') }}
