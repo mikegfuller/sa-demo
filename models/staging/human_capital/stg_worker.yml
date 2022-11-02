@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_worker
+    description: "worker information from the human capital system"
+    columns:
+      - name: employee_id
+        description: "(primary key) id for the employee, contractor ids are not populated in this field"
+        tests:
+          - unique
+          - not_null
+
+      - name: hire_dt
+        description: "date employee was hired, contractor hire dates are blank"
+
+      - name: worker_country
+        description: "country of residence for worker"
+
+      - name: worker_name
+        description: "worker full name"
+
+      - name: worker_docs
+        description: "list of documents we have on file"
+
+      - name: date_of_birth
+        description: "worker birthday"
+
+      - name: worker_id
+        description: "worker id (includes contractors)"
+
+      - name: delete_flg
+        description: "soft delete flag"
+
+      - name: update_dt
+        description: "date the record was updated"
+
+      - name: worker_licenses
+        description: "licenses on file for the worker"
+
+      - name: worker_passports
+        description: "passport on file for the worker"

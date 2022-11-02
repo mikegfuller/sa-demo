@@ -1,0 +1,10 @@
+version: 2
+
+
+sources:
+  - name: human_capital
+    description: human capital data
+    database: mike_fuller_demo
+    schema: human_capital
+    tables:
+      - name: worker
