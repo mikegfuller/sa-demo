@@ -20,6 +20,18 @@ models:
         tests:
           - unique
 
+  - name: agg_returned_orders_by_month
+    description: the aggregate number of orders returned broken out by calendar month
+    columns:
+      - name: order_month
+        description: calendar month the order was placed
+      - name: returned_orders
+        description: number of orders returned
+      - name: return_rate
+        description: rate of orders returned (calc is returned orders / total orders)
+      - name: row_count
+        description: total rows
+
 exposures:
   - name: returned_orders
     type: dashboard
