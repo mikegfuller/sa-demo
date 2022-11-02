@@ -24,7 +24,7 @@ exposures:
   - name: returned_orders
     type: dashboard
     maturity: high
-    url: https://fishtown.looker.com/dashboards/606
+    url: https://fishtown.looker.com/dashboards/663
     description: 
       How is our return rate trending over time?
 
@@ -32,8 +32,8 @@ exposures:
       - ref('agg_returned_orders_by_month')
 
     owner:
-      name: Alex 
-      email: alex.dinsmoor@dbtlabs.com 
+      name: Sales Ops 
+      email: sales-ops@dbtlabs.com
 
 
   - name: active_orders
