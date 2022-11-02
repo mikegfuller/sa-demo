@@ -13,7 +13,6 @@ renamed as (
         worker as worker_name,
         worker_documents as worker_docs,
         date_of_birth as date_of_birth,
-        workday_id as workday_id,
         _fivetran_deleted as delete_flg,
         _fivetran_synced as update_dt,
         licenses as worker_licenses,
