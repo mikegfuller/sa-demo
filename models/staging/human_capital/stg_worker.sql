@@ -15,8 +15,8 @@ renamed as (
         worker as worker_name,
         worker_documents as worker_docs,
         date_of_birth as date_of_birth,
-        _fivetran_deleted as delete_flg,
-        _fivetran_synced as update_dt,
+        is_deleted as delete_flg,
+        updated_at as update_dt,
         licenses as worker_licenses,
         passports as worker_passports
 
