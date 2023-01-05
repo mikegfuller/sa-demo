@@ -20,13 +20,11 @@ snapshot-paths: ["snapshots"]
 
 
 
-target-path: "tmp/target"  # directory which will store compiled SQL files
+target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
     - "dbt_packages"
-
-log-path: "tmp/logs"
 
 on-run-start:
   - "alter warehouse transforming set warehouse_size=small;"
