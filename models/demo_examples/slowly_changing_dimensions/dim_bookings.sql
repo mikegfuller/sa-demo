@@ -14,6 +14,6 @@ dbt_scd_id,
 dbt_updated_at,
 dbt_valid_from,
 dbt_valid_to,
-{{ scd_cols('status,state', 'id', 'event_dt') }} 
+{{ scd3_cols('status,state', 'id', 'event_dt') }} 
 from {{ ref('bookings_snapshot') }}
 order by id, event_dt
