@@ -177,6 +177,9 @@ models:
     columns:
       - name: employee_id
         description: "(primary key) id for the employee, contractor ids are not populated in this field"
+        tests:
+          - unique
+          - not_null
 
       - name: hire_dt
         description: "date employee was hired, contractor hire dates are blank"
