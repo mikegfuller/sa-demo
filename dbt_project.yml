@@ -53,6 +53,12 @@ models:
     marts:
       core:
         materialized: table
+      aggregates:
+        formula1:
+            materialized: table
+      ml:
+        formula1:
+          materialized: table
 
       
 seeds:
