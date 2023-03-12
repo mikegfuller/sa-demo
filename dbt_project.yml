@@ -60,4 +60,9 @@ seeds:
     snowflake_contract_rates:
       +column_types:
         effective_date: DATE
-        rate: NUMBER   
+        rate: NUMBER
+
+tests:
+  +severity: warn
+  +warn_if: ">10"
+

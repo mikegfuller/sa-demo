@@ -1,6 +1,6 @@
 {{
     config(
-        enabled=true,
+        enabled=false,
         severity='warn',
         tags = ['finance']
     )

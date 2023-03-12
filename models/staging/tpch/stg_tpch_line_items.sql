@@ -23,7 +23,7 @@ renamed as (
         
         case 
             when l_returnflag in ('R') then 'returned'
-            when l_returnflag in ('A') then 'accepted'
+            when l_returnflag in ('A', 'N') then 'accepted'
             else 'unknown'
         end as return_flag, 
 

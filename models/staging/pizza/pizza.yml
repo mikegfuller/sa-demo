@@ -2,7 +2,7 @@ version: 2
 
 template_model_config: &model_config
   config:
-    database: mike_fuller_sandbox
+    database: WATERS_WORKSPACE_DEV
     schema: pizza
     materialized: table
 

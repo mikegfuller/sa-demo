@@ -2,10 +2,9 @@
 
 {{
     config(
-      target_database='mike_fuller_sandbox',
+      target_database='WATERS_WORKSPACE_DEV',
       target_schema='sa_demo_snapshots',
       unique_key='id',
-
       strategy='timestamp',
       updated_at='event_dt',
     )
