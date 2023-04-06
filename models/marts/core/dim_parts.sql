@@ -21,6 +21,7 @@ final as (
         retail_price
     from
         part
+    where current_flg = 'Y'
 )
 select *
 from final  
