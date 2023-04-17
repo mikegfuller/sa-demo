@@ -1,3 +1,5 @@
+--change
+
 {{
     config(
         materialized = 'table',
