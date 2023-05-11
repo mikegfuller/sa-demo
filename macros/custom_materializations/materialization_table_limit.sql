@@ -14,6 +14,8 @@
 
   {{ run_hooks(pre_hooks) }}
 
+  {{ log('Limiting data! DBT_LIMIT_CLAUSE has been set to limit data to ' ~ env_var('DBT_LIMIT_CLAUSE') ~ ' records', info=True) }}
+
   {#-- Drop the relation if it was a view to "convert" it in a table. This may lead to
     -- downtime, but it should be a relatively infrequent occurrence  #}
   {% if old_relation is not none and not old_relation.is_table %}
@@ -21,12 +23,18 @@
     {{ drop_relation_if_exists(old_relation) }}
   {% endif %}
 
-  {% set limit_clause="limit 10" %}
+  {% set limit_clause="limit " ~ env_var('DBT_LIMIT_CLAUSE') %}
 
-  {% set compiled_with_limit = compiled_code ~ '\n' ~ limit_clause %}
+  {% set compiled_code_with_limit = compiled_code ~ '\n' ~ limit_clause %}
+
+  {% if env_var('DBT_LIMIT_CLAUSE') %}
+
+  {% set compiled_code=compiled_code_with_limit %}
+    
+  {% endif %}
 
   {% call statement('main', language=language) -%}
-      {{ create_table_as(False, target_relation, compiled_with_limit, language) }}
+      {{ create_table_as(False, target_relation, compiled_code, language) }}
   {%- endcall %}
 
   {{ run_hooks(post_hooks) }}
