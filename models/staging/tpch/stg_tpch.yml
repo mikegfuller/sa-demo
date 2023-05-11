@@ -99,6 +99,13 @@ models:
           - not_null
       - name: customer_key
         description: foreign key to stg_tpch_customers
+        tests:
+          - relationships:
+              field: customer_key
+              to: ref('stg_tpch_customers')
+              severity: error
+              config:
+                store_failures: true 
       - name: status_code
         description: status of the order
       - name: total_price
