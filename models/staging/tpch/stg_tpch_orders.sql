@@ -24,3 +24,29 @@ rename as (
 )
 
 select * from rename
+
+union all
+
+select 
+null as order_key,
+null as customer_key,
+'U' as status_code,
+null as total_price,
+'1900-01-01' as order_date,
+'UNK' as priority_code,
+'UNK' as clerk_name,
+-1 as ship_priority,
+'Unknown' as comment
+
+union all
+
+select 
+0 as order_key,
+0 as customer_key,
+'U' as status_code,
+0 as total_price,
+'1900-01-01' as order_date,
+'UNK' as priority_code,
+'UNK' as clerk_name,
+-1 as ship_priority,
+'Unknown' as comment
