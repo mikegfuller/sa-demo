@@ -21,8 +21,12 @@
     {{ drop_relation_if_exists(old_relation) }}
   {% endif %}
 
+  {% set limit_clause="limit 10" %}
+
+  {% set compiled_with_limit = compiled_code ~ '\n' ~ limit_clause %}
+
   {% call statement('main', language=language) -%}
-      {{ create_table_as(False, target_relation, compiled_code, language) }}
+      {{ create_table_as(False, target_relation, compiled_with_limit, language) }}
   {%- endcall %}
 
   {{ run_hooks(post_hooks) }}
