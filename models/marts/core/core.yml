@@ -3,13 +3,18 @@ version: 2
 models:
   - name: dim_customers
     description: Customer dimensions table
+    config:
+      contract:
+        enforced: true
     columns:
       - name: customer_key
+        data_type: int
         description: Primary key on the customers table
         tests:
           - unique
           - not_null
       - name: region
+        data_type: string
         description: region name
         tests:
           - accepted_values:
@@ -17,16 +22,22 @@ models:
               severity: warn
       - name: name
         description: customer id
+        data_type: string
       - name: address
         description: address of the customer
+        data_type: string
       - name: nation
         description: nation name
+        data_type: string
       - name: phone_number
         description: phone number of the customer
+        data_type: string
       - name: account_balance
         description: '{{ doc("account_balance") }}'
+        data_type: int
       - name: market_segment
         description: market segment of the customer
+        data_type: string
 
 
   - name: dim_parts
