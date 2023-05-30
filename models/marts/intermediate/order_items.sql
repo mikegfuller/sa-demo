@@ -1,4 +1,4 @@
-
+--{{ ref('stg_tpch_customers') }}
 with orders as (
     
     select * from {{ ref('stg_tpch_orders') }}
