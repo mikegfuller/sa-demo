@@ -1,2 +1,12 @@
 [sqlfluff]
 templater = dbt
+
+exclude_rules = ambiguous.column_count
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:layout.select_targets]
+wildcard_policy = multiple
+
+layout.commas = leading
