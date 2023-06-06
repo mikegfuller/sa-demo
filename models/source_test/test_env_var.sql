@@ -1,0 +1,1 @@
+select '{{ env_var('DBT_TEST_VAR', 'value_does_not_exist') }}' as test_column
