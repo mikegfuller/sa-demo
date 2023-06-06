@@ -2,6 +2,6 @@ version: 2
 sources:
   - name: sandbox_source
     database: mike_fuller_sandbox
-    schema: "{{ env_var('DBT_NEW_SOURCE_SCHEMA') if env_var('DBT_NEW_SOURCE_SCHEMA') != 'default' else 'source_a' }}"
+    schema: "{{ env_var('DBT_NEW_SOURCE_SCHEMA') if env_var('DBT_NEW_SOURCE_SCHEMA') != None else 'source_a' }}"
     tables:
       - name: test_table
