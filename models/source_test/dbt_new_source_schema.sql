@@ -1,1 +1,1 @@
-select '{{ env_var('DBT_NEW_SOURCE_SCHEMA') }}' as source_schema
+select '{{ env_var('DBT_NEW_SOURCE_SCHEMA', 'default') }}' as source_schema
