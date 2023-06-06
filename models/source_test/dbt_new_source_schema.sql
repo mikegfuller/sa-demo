@@ -1,0 +1,1 @@
+select '{{ env_var('DBT_NEW_SOURCE_SCHEMA') }}' as source_schema
