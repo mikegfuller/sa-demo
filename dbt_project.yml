@@ -41,6 +41,8 @@ vars:
   fct_order_items: 'mock_source__fct_order_items' # this is a map for unit testing
   vars:
   'dbt_date:time_zone': 'America/Los_Angeles'
+  load_date: '1992-01-08'
+  tpch_size: 10 #1, 10, 100, 1000, 10000
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
