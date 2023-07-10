@@ -1,3 +1,3 @@
 {{ codegen.generate_model_yaml(
-    model_name='stg_tpch_orders'
+    model_names=['stg_tpch_orders']
 ) }}
