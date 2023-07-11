@@ -13,7 +13,7 @@ events as (
 
 ,slowly_changing_dim as (
     select 
-{{ dbt_utils.surrogate_key(['id', 'event_dt']) }} as row_id
+{{ dbt_utils.generate_surrogate_key(['id', 'event_dt']) }} as row_id
 ,events.id
 ,events.status
 ,events.event_dt as event_dt
