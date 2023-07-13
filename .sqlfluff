@@ -1,0 +1,57 @@
+[sqlfluff]
+dialect = snowflake
+templater = dbt
+
+indent_unit = space
+max_line_length = 80
+runaway_limit = 10
+
+[sqlfluff:indentation]
+# See https://docs.sqlfluff.com/en/stable/indentation.html
+allow_implicit_indents = True
+
+[sqlfluff:layout:type:common_table_expression]
+spacing_within = single
+
+[sqlfluff:layout:type:from_clause]
+line_position = leading
+
+[sqlfluff:rules]
+comma_style = trailing
+
+[sqlfluff:rules:aliasing.forbid]
+force_enable = True
+
+[sqlfluff:rules:ambiguous.column_references]
+group_by_and_order_by_style = implicit
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:layout.operators]
+operator_new_lines = after
+
+[sqlfluff:rules:references.consistent]
+force_enable = True
+
+[sqlfluff:rules:references.keywords]
+unquoted_identifiers_policy = aliases
+quoted_identifiers_policy = all
+
+[sqlfluff:rules:structure.subquery]
+forbid_subquery_in = both
+
+[sqlfluff:templater:dbt]
+project_dir = ./
