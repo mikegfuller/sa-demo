@@ -1,0 +1,14 @@
+models:
+  - name: contract_example
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: int_col
+        data_type: int
+        constraints:
+          - type: not_null
+      - name: string_col
+        data_type: string
+      - name: date_col
+        data_type: date
