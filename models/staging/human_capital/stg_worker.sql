@@ -1,5 +1,3 @@
---change
-
 with source as (
 
     select * from {{ source('human_capital', 'worker') }}
@@ -18,7 +16,8 @@ renamed as (
         is_deleted as delete_flg,
         updated_at as update_dt,
         licenses as worker_licenses,
-        passports as worker_passports
+        passports as worker_passports,
+        current_timestamp as update_at
 
     from source
 
