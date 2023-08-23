@@ -1,0 +1,1 @@
+select * from {{ ref('pizza_hq', 'lkp_pizza_sizes') }}
