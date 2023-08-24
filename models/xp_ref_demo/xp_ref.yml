@@ -1,0 +1,10 @@
+groups:
+  - name: sales
+    owner:
+      name: Sales Team
+      email: sales@pizza.hq
+
+models:
+  - name: xp_ref_sample
+    access: private
+    group: sales
