@@ -1,11 +1,9 @@
 semantic_models:
-  #The name of the semantic model.
   - name: pizza_orders
     defaults:
       agg_time_dimension: order_date
     description: |
       Order fact table. This table is at the order grain with one row per order.
-    #The name of the dbt model and schema
     model: ref('fct_pizza_sales')
     entities:
       - name: order_id
@@ -25,8 +23,9 @@ semantic_models:
   - name: dim_pizza
     model: ref('dim_pizza')
     entities:
-      - name: pizza_id
+      - name: dim_pizza
         type: primary
+        expr: pizza_id
     dimensions:
       - name: pizza_category
         type: categorical
