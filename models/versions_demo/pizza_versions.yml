@@ -1,6 +1,6 @@
 models:
   - name: pizza_big_spenders
-    latest_version: 2
+    latest_version: 1
     config:
       materialized: table
     versions:
