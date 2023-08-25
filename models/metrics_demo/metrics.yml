@@ -10,6 +10,9 @@ semantic_models:
     entities:
       - name: order_id
         type: primary
+      - name: dim_pizza
+        type: foreign
+        expr: pizza_id
     measures:
       - name: total_price
         description: The total price for each order.
@@ -19,6 +22,14 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
+  - name: dim_pizza
+    model: ref('dim_pizza')
+    entities:
+      - name: pizza_id
+        type: primary
+    dimensions:
+      - name: pizza_category
+        type: categorical
 
 metrics:
   - name: revenue
