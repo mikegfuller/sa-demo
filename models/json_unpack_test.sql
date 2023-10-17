@@ -1,0 +1,1 @@
+select * from mike_fuller_sandbox.json_test.json_sample
