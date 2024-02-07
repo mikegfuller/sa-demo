@@ -1,4 +1,9 @@
-{{ config(materialized='incremental') }}
+{{
+    config(
+        materialized='incremental',
+        unique_key='id'
+    )
+}}
 
 with source as (
 
