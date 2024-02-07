@@ -22,7 +22,8 @@ final as (
         delete_flg,
         update_dt,
         worker_licenses,
-        worker_passports
+        worker_passports,
+        new_field
     from
         worker
 )
