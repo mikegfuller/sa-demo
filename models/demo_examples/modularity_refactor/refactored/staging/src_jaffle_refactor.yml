@@ -1,0 +1,7 @@
+sources:
+  - name: refactored_jaffle
+    tables:
+      - name: jaffle_customers
+      - name: jaffle_orders
+      - name: jaffle_payments
+      
