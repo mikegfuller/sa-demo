@@ -1,0 +1,1 @@
+select area_of_circle(10) as udf_area_of_circle, addone(17) as udf_addone
