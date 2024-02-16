@@ -16,8 +16,8 @@ select
 ,events.status
 ,events.event_dt as event_dt
 ,events.event_dt as eff_from
-,case when lead(events.id) over(order by id) = id then lead(events.event_dt) over(order by events.id) else null end as eff_to
-,case when lead(events.id) over(order by id) = id then 'N' else 'Y' end as current_flg
+,case when lead(events.id) over(order by id,event_dt) = id then lead(events.event_dt) over(order by events.id) else null end as eff_to
+,case when lead(events.id) over(order by id,event_dt) = id then 'N' else 'Y' end as current_flg
 from events
 )
 
