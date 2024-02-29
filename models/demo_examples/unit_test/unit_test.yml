@@ -1,0 +1,11 @@
+unit_tests:
+  - name: check_math
+    description: "check math"
+    model: mart_unit_test
+    given:
+      - input: ref('stg_unit_test')
+        rows:
+          - {start_num: 1}
+    expect:
+      rows:
+        - {start_num: 1, final_num: 2}

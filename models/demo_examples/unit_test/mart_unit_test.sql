@@ -1,0 +1,1 @@
+select start_num, start_num+1 as final_num from {{ ref('stg_unit_test') }}
