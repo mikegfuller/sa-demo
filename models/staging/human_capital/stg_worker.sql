@@ -1,4 +1,8 @@
---change
+{{
+  config(
+    snowflake_warehouse='my_warehouse_name'
+  )
+}}
 
 with source as (
 
@@ -9,16 +13,17 @@ with source as (
 renamed as (
 
     select
-        employee_id as employee_id,
+        employee_id,
         hire_date as hire_dt,
         work_address_country as worker_country,
         worker as worker_name,
         worker_documents as worker_docs,
-        date_of_birth as date_of_birth,
+        date_of_birth,
         is_deleted as delete_flg,
         updated_at as update_dt,
         licenses as worker_licenses,
-        passports as worker_passports
+        passports as worker_passports,
+        'my_new_field' as new_field
 
     from source
 
