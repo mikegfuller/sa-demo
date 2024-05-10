@@ -1,1 +1,1 @@
-select id, type, color from {{ ref('column_description_upstream') }}
+select id, breed, color from {{ ref('column_description_upstream') }}
