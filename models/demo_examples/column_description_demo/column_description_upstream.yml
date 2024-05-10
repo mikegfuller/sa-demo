@@ -1,0 +1,10 @@
+models: 
+  - name: column_description_upstream
+    description: This model creates a static entry representing a dog with defined attributes.
+    columns:
+      - name: id
+        description: The database identifier for the entry.
+      - name: breed
+        description: The type of dog.
+      - name: color
+        description: The color of the dog.
