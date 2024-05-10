@@ -1,0 +1,1 @@
+select id, breed, color from {{ ref('column_description_upstream') }}
