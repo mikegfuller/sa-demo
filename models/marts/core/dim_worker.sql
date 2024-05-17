@@ -12,6 +12,7 @@ final as (
         year(hire_dt) as hire_year,
         quarter(hire_dt) as hire_quarter,
         month(hire_dt) as hire_month,
+        datediff(month, hire_dt, current_date) as tenure_months,
         worker_country,
         worker_name,
         split_part(worker_name,' ', 1) as worker_first_name,
