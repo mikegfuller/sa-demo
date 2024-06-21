@@ -1,0 +1,10 @@
+models:
+  - name: test_custom_mat
+    columns:
+      - name: ID
+        tests:
+          - unique
+          - not_null
+      - name: UPDATED_AT
+        tests:
+          - not_null

@@ -5,3 +5,4 @@
 }}
 
 select 1 as id
+order by 1
