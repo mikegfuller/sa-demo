@@ -1,0 +1,17 @@
+models: 
+  - name: test_constraint
+    description: This model provides a simple test constraint with a single record for validation purposes.
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        description: The unique identifier for the test record.
+        data_type: integer
+      
+      - name: description
+        description: A textual representation of the test record.
+        data_type: string
+        constraints:
+          - type: custom
+            expression: "tag (mike_test_tag = 'test_value')"
