@@ -1,0 +1,71 @@
+models:
+  - name: dim_employee
+    description: This model provides a comprehensive view of employee information by consolidating HR, payroll, and training data. It includes personal details, employment specifics, compensation, and training completion statuses. This model is used for HR analytics, compliance tracking, and employee performance evaluation.
+    columns:
+      - name: employee_id
+        description: A unique identifier for each employee.
+        tests:
+          - unique
+          - not_null
+
+      - name: hire_date
+        description: The date when the employee was hired.
+        tests:
+          - not_null
+
+      - name: work_address_country
+        description: The country of the employee's work address.
+
+      - name: worker
+        description: Information about the worker, including their full name and code.
+
+      - name: worker_documents
+        description: Documents related to the worker.
+
+      - name: date_of_birth
+        description: The employee's birth date.
+
+      - name: system_id
+        description: System-specific identification number for internal tracking purposes.
+
+      - name: is_deleted
+        description: Indicates whether the employee record has been marked as deleted.
+
+      - name: updated_at
+        description: The timestamp of the last update made to the employee's record.
+        tests:
+          - not_null
+
+      - name: licenses
+        description: List of professional licenses held by the employee.
+
+      - name: passports
+        description: List of passports associated with the employee.
+
+      - name: position
+        description: The current job position of the employee.
+        tests:
+          - not_null
+
+      - name: annual_salary
+        description: The annual salary of the employee.
+        tests:
+          - not_null
+
+      - name: pct_base_salary
+        description: The percentage of the base salary in the employee's overall compensation.
+
+      - name: pto_days_taken
+        description: The number of paid time off (PTO) days the employee has already taken.
+
+      - name: pto_days_pending
+        description: The number of paid time off (PTO) days the employee has pending approval.
+
+      - name: completed_security
+        description: Indicates if the employee has completed security training.
+
+      - name: completed_harrassment
+        description: Indicates if the employee has completed anti-harassment training.
+
+      - name: completed_policy_signatures
+        description: Indicates if the employee has completed signing all required policies.
