@@ -1,0 +1,6 @@
+sources:
+  - name: hr
+    database: mike_fuller_demo_hr
+    schema: hr
+    tables:
+      - name: worker

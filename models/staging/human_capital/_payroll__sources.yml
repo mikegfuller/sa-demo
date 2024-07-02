@@ -1,0 +1,6 @@
+sources:
+  - name: payroll
+    database: mike_fuller_demo_payroll
+    schema: payroll
+    tables:
+      - name: employee_payroll
