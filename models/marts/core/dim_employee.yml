@@ -1,0 +1,47 @@
+models: 
+  - name: dim_employee
+    description: This model consolidates employee details from HR, Learning Management System (LMS), and Payroll data sources, providing an integrated view of each employee's profile, employment details, training completion status, and payroll information.
+    columns:
+      - name: employee_id
+        description: Unique identifier for each employee.
+        tests:
+          - unique
+          - not_null
+      - name: hire_date
+        description: The date when the employee was hired.
+        tests:
+          - not_null
+      - name: work_address_country
+        description: The country where the employee's work address is located.
+      - name: worker
+        description: The name or identification of the worker.
+      - name: worker_documents
+        description: List of documents associated with the worker.
+      - name: date_of_birth
+        description: The birth date of the employee.
+      - name: system_id
+        description: System-generated identifier for internal system use.
+      - name: is_deleted
+        description: Flag indicating if the employee is marked as deleted in the system.
+      - name: updated_at
+        description: Timestamp of the last update to the employee's record.
+      - name: licenses
+        description: Licenses held by the employee.
+      - name: passports
+        description: Passports held by the employee.
+      - name: position
+        description: The position or job title of the employee.
+      - name: annual_salary
+        description: The annual salary of the employee.
+      - name: pct_base_salary
+        description: The percentage of the salary that is base pay.
+      - name: pto_days_taken
+        description: Total number of Paid Time Off (PTO) days taken by the employee.
+      - name: pto_days_pending
+        description: Total number of Paid Time Off (PTO) days pending for approval or use.
+      - name: completed_security
+        description: Indicates if the employee has completed security training.
+      - name: completed_harrassment
+        description: Indicates if the employee has completed harassment training.
+      - name: completed_policy_signatures
+        description: Indicates if the employee has signed off on required policies.
