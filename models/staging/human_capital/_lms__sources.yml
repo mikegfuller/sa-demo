@@ -1,6 +1,0 @@
-sources:
-  - name: lms
-    database: mike_fuller_demo_lms
-    schema: lms
-    tables:
-      - name: training
