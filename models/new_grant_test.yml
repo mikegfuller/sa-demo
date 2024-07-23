@@ -1,0 +1,9 @@
+models: 
+  - name: new_grant_test
+    description: The purpose of this model is to generate a basic test output for new grant functionality.
+    columns:
+      - name: field_name
+        description: Static test field with a value of 1.
+    config:
+      grants:
+        select: '{{var("role_test")}}'
