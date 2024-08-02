@@ -5,6 +5,7 @@ saved_queries:
     config:
       cache:
         enabled: true  # Or false if you want it disabled by default
+      snowflake_warehouse: new_wh
     query_params:
       metrics:
         - revenue
