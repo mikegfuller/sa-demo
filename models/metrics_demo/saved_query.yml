@@ -14,3 +14,4 @@ saved_queries:
           alias: my_export_alias
           export_as: table
           schema: my_export_schema_name
+          snowflake_warehouse: new_wh
