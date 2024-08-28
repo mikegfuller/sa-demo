@@ -1,5 +1,5 @@
-{% macro dynamic_source() %}
+{% macro mike_source_schema() -%}
+my_schema
+{%- endmacro %}
 
-my_source
 
-{% endmacro %}

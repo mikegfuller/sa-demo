@@ -1,0 +1,5 @@
+sources:
+  - name: test_source
+    schema: "{{ var('test_schema') }}"
+    tables:
+      - name: table_name

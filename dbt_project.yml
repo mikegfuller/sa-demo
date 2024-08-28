@@ -43,6 +43,7 @@ vars:
   'dbt_date:time_zone': 'America/Los_Angeles'
   load_date: '1992-01-08'
   tpch_size: 10 #1, 10, 100, 1000, 10000
+  test_schema: 'mike_test_schema'
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models

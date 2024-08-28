@@ -1,1 +1,1 @@
-{{ dynamic_source }}
+select * from {{ source('test_source', 'table_name') }}
