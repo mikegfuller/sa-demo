@@ -1,0 +1,9 @@
+models:
+  - name: test_grant_share
+    config:
+      grants:
+        select: ['share mikef_test']
+    description: This model is used to test the granting of select permissions to a non-existent share, primarily for testing and validation purposes.
+    columns:
+      - name: id
+        description: A placeholder identifier used for testing purposes.
