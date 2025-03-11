@@ -61,9 +61,6 @@ models:
       ml:
         formula1:
           materialized: table
-    
-    metrics_demo:
-      +snowflake_warehouse: new_wh
 
       
 seeds:
