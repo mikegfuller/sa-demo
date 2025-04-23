@@ -20,7 +20,8 @@ renamed as (
         is_deleted as delete_flg,
         updated_at as update_dt,
         licenses as worker_licenses,
-        passports as worker_passports
+        passports as worker_passports,
+        'my_new_field' as new_field
 
     from source
 
