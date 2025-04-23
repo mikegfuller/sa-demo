@@ -49,6 +49,8 @@ vars:
 
 models:
   tpch:
+    demo_examples:
+      python_version: '3.8'
     staging:
       +materialized: view
 
