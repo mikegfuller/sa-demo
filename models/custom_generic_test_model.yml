@@ -1,0 +1,13 @@
+models:
+  - name: custom_generic_test_model
+    columns:
+      - name: id
+        data_tests:
+          - unique
+          - not_null
+          - is_even
+      - name: description
+        data_tests:
+          - not_null
+          - dbt_utils.not_null_proportion:
+              at_least: .95
