@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: pit_stops_joined
+    description: this is the number of pitstops joined
